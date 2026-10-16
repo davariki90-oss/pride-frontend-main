@@ -1,0 +1,320 @@
+/* Token desain Pride: diambil dari logo (krem, charcoal, emas) */
+:root {
+  --cream: #fbf8f2;
+  --cream-2: #f3eee4;
+  --cream-3: #f6f2ea;
+  --ink: #2a2926;
+  --muted: #5a554b;
+  --muted-2: #6e675b;
+  --gold: #8a6d3b;
+  --gold-deco: #b08d57;
+  --line: #e7e0d1;
+  --line-2: #d9d0bc;
+  --white: #ffffff;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Jost', system-ui, sans-serif;
+
+  --radius-card: 20px;
+  --radius-pill: 999px;
+  --container: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gold);
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* Tata letak */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+.section {
+  padding: 96px 0;
+}
+
+.section--tint {
+  background: var(--cream-2);
+}
+
+.section--dark {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+/* Tombol */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border: 1px solid var(--ink);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn:hover {
+  color: var(--ink);
+  background: var(--cream-2);
+}
+
+.btn--primary {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.btn--primary:hover {
+  background: #403e39;
+  color: var(--cream);
+}
+
+.btn--light {
+  background: var(--cream);
+  border-color: var(--cream);
+  color: var(--ink);
+}
+
+.btn--light:hover {
+  background: var(--cream-2);
+  color: var(--ink);
+}
+
+.btn--ghost-light {
+  border-color: var(--cream);
+  color: var(--cream);
+}
+
+.btn--ghost-light:hover {
+  background: rgba(251, 248, 242, 0.12);
+  color: var(--cream);
+}
+
+.btn--sm {
+  padding: 10px 20px;
+  font-size: 13px;
+}
+
+.btn--lg {
+  padding: 16px 34px;
+  font-size: 16px;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.link-gold {
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+  font-size: 15px;
+}
+
+/* Formulir */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  background: var(--white);
+  font-size: 15px;
+}
+
+.input--pill {
+  border-radius: var(--radius-pill);
+  padding: 11px 18px;
+  font-size: 14px;
+}
+
+textarea.input {
+  resize: vertical;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--muted-2);
+}
+
+.error-text {
+  font-size: 13px;
+  color: #9a3a2a;
+}
+
+@media (max-width: 960px) {
+  .container {
+    padding: 0 28px;
+  }
+  .section {
+    padding: 72px 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    padding: 0 20px;
+  }
+  .section {
+    padding: 56px 0;
+  }
+}
+
+/* Pride Studio refresh — clean editorial style, rounded surfaces and responsive polish */
+:root{--cream:#fcfaf6;--cream-2:#f4f0e8;--cream-3:#f8f5ef;--ink:#242720;--muted:#686b61;--muted-2:#858579;--gold:#98764a;--gold-deco:#c4a779;--line:#e7e1d6;--line-2:#d8cfbf;--radius-card:24px;--container:1240px}
+body{background:var(--cream);letter-spacing:.005em}
+::selection{background:#e9ddc6;color:var(--ink)}
+.container{padding-left:clamp(20px,4vw,48px);padding-right:clamp(20px,4vw,48px)}
+.section{padding:clamp(64px,8vw,108px) 0}
+.navbar{position:sticky;top:0;z-index:30;background:rgba(252,250,246,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(231,225,214,.85)}
+.navbar__inner{min-height:82px}
+.navbar__nav> a{font-size:14px;transition:color .2s}
+.navbar__nav> a.is-active{color:var(--gold)}
+.btn{border-radius:999px;min-height:44px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(36,39,32,.09)}
+.btn--primary{background:#252820;border-color:#252820}
+.btn--primary:hover{background:#3b4034}
+.hero{padding-top:clamp(58px,8vw,104px);padding-bottom:clamp(68px,9vw,112px);gap:clamp(36px,6vw,82px)}
+.hero__title{font-size:clamp(48px,6.4vw,82px);letter-spacing:-1.8px}
+.hero__title em{color:#9b7b50}
+.hero__text{max-width:550px;font-size:clamp(16px,1.5vw,19px)}
+.hero__circle{background:radial-gradient(circle at 35% 35%,#eee4d1,#e3d6bd 72%,#d9c8a8);opacity:.9}
+.phone{box-shadow:0 32px 80px rgba(43,42,34,.2);border-radius:42px}
+.section--tint{background:#f4f0e8}
+.moment-card{min-height:220px;border-radius:24px;padding:28px;box-shadow:0 12px 35px rgba(48,43,31,.04);transition:transform .25s,box-shadow .25s}
+.moment-card:hover{transform:translateY(-5px);box-shadow:0 20px 42px rgba(48,43,31,.1)}
+.feature-card,.step{border-radius:22px}
+.feature-card{padding:28px;border:1px solid rgba(231,225,214,.85);background:rgba(255,255,255,.62);transition:transform .2s,box-shadow .2s}
+.feature-card:hover{transform:translateY(-3px);box-shadow:0 16px 35px rgba(40,38,29,.06)}
+.template-card{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 6px 24px rgba(42,39,29,.035);transition:transform .25s,box-shadow .25s}
+.template-card:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(42,39,29,.11)}
+.template-card>a{display:block;overflow:hidden}
+.template-cover{position:relative;isolation:isolate;overflow:hidden;border-radius:0}
+.template-cover::before,.editor-cover--polished::before{content:"";position:absolute;inset:14px;border:1px solid currentColor;opacity:.2;pointer-events:none;z-index:-1}
+.template-cover__event{letter-spacing:3px;font-size:10px}
+.template-cover__names{font-size:clamp(28px,3vw,40px);padding:0 16px}
+.template-cover__date{letter-spacing:2px}
+.template-card__meta{padding:18px 18px 10px}
+.template-card__meta h3{font-family:var(--font-display);font-size:25px;font-weight:600}
+.template-card__meta span{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-2)}
+.template-card__actions{padding:0 18px 18px;gap:8px}
+.template-card__actions .btn{font-size:12px;padding:10px 12px}
+.filter-bar{gap:20px;margin-bottom:18px}
+.chip{border-radius:999px;padding:10px 17px;background:#fff;border:1px solid var(--line);transition:all .2s}
+.chip.is-active{background:var(--ink);border-color:var(--ink);color:var(--cream)}
+.input{border-radius:13px;border-color:var(--line-2);background:#fff;padding:13px 15px}
+.input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(152,118,74,.1);outline:none}
+.page-head{padding-top:68px;padding-bottom:34px}
+.page-head__title{letter-spacing:-.7px}
+.faq__item{padding:22px 0;border-bottom:1px solid var(--line)}
+.cta-band{background:#252820}
+.footer{background:#242720;color:#f7f2e8}
+.footer__inner{padding-top:30px;padding-bottom:30px;gap:20px}
+@media(max-width:640px){.navbar__inner{min-height:70px}.hero{padding-top:48px}.hero__title{font-size:clamp(42px,12vw,60px)}.hero__visual{flex-basis:100%}.phone{width:260px;height:520px}.section{padding:62px 0}.template-card__actions{flex-direction:column}.template-card__actions .btn{width:100%}}
